@@ -4,14 +4,16 @@
 		<link rel="stylesheet" href="rate_css.css">
 	</head>
 	<body>
-		<h1>Rate area</h1>
+		<h1>Rating</h1>
 		<div id="div">
 
-			<img id="strawb1" class="rateImg" onclick="change('strawb1')" scr="strawb_empty.png">
-			<img id="strawb2" class="rateImg" onclick="change('strawb2')" scr="strawb_empty.png">
-			<img id="strawb3" class="rateImg" onclick="change('strawb3')" scr="strawb_empty.png">
-			<img id="strawb4" class="rateImg" onclick="change('strawb4')" scr="strawb_empty.png">
-			<img id="strawb5" class="rateImg" onclick="change('strawb5')" scr="strawb_empty.png">
+			<h3>Overal rating</h3>
+
+			<img id="strawb1" class="rateImg" onclick="change1()" scr="strawb_empty.png">
+			<img id="strawb2" class="rateImg" onclick="change2()" scr="strawb_empty.png">
+			<img id="strawb3" class="rateImg" onclick="change3()" scr="strawb_empty.png">
+			<img id="strawb4" class="rateImg" onclick="change4()" scr="strawb_empty.png">
+			<img id="strawb5" class="rateImg" onclick="change5()" scr="strawb_empty.png">
 		
 		</div>
 		<script>
@@ -22,16 +24,68 @@
 			var state4 = 0;
 			var state5 = 0;
 
-			function change(which) {
+			function change1() {
 				console.log("IMG pressed");
-				var image = document.getElementById(which);
+				var image = document.getElementById(strawb1);
 		    	if (state1 === 1) {
+		    		image.src = "strawb_empty.png";
+		    		state1 = 0;
+		    		console.log("Changed to empty");
+		    	} else {
+		        	image.src = "strawb_full.png";
+		    		state1 = 1;
+		    		console.log("Changed to full");
+		 		}
+		 	}
+		 	function change2() {
+				console.log("IMG pressed");
+				var image = document.getElementById(strawb2);
+		    	if (state1 === 1) {
+		    		image.src = "strawb_empty.png";
+		    		state2 = 0;
+		    		console.log("Changed to empty");
+		    	} else {
+		        	image.src = "strawb_full.png";
+		    		state2 = 1;
+		    		console.log("Changed to full");
+		 		}
+		 	}
+		 	function change3() {
+				console.log("IMG pressed");
+				var image = document.getElementById(strawb3);
+		    	if (state1 === 1) {
+		    		image.src = "strawb_empty.png";
+		    		state3 = 0;
+		    		console.log("Changed to empty");
+		    	} else {
+		        	image.src = "strawb_full.png";
+		    		state3 = 1;
+		    		console.log("Changed to full");
+		 		}
+		 	}
+		 	function change4() {
+				console.log("IMG pressed");
+				var image = document.getElementById(strawb4);
+		    	if (state1 === 1) {
+		    		image.src = "strawb_empty.png";
+		    		state4 = 0;
+		    		console.log("Changed to empty");
+		    	} else {
+		        	image.src = "strawb_full.png";
+		    		state4 = 1;
+		    		console.log("Changed to full");
+		 		}
+		 	}
+		 	function change5() {
+				console.log("IMG pressed");
+				var image = document.getElementById(strawb5);
+		    	if (state5 === 1) {
 		    		image.src = "strawb_empty.png";
 		    		state = 0;
 		    		console.log("Changed to empty");
 		    	} else {
 		        	image.src = "strawb_full.png";
-		    		state = 1;
+		    		state5 = 1;
 		    		console.log("Changed to full");
 		 		}
 		 	}
