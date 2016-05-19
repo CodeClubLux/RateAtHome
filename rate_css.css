@@ -1,0 +1,9 @@
+#div {
+	display: inline-block;
+	border: 10px solid black;
+}
+
+.rateImg {
+	height: 150px;
+	width: 100px;
+}

@@ -1,18 +1,31 @@
 <html>
 	<head>
 		<title>Rate</title>
+		<link rel="stylesheet" href="rate_css.css">
 	</head>
 	<body>
-		<h1>Rate</h1>
-		<img id="myImage" onclick="change()" scr="strawb_empty.png" width="100" height="150">
-		<p>Click me!</p>
+		<h1>Rate area</h1>
+		<div id="div">
+
+			<img id="strawb1" class="rateImg" onclick="change('strawb1')" scr="strawb_empty.png">
+			<img id="strawb2" class="rateImg" onclick="change('strawb2')" scr="strawb_empty.png">
+			<img id="strawb3" class="rateImg" onclick="change('strawb3')" scr="strawb_empty.png">
+			<img id="strawb4" class="rateImg" onclick="change('strawb4')" scr="strawb_empty.png">
+			<img id="strawb5" class="rateImg" onclick="change('strawb5')" scr="strawb_empty.png">
+		
+		</div>
 		<script>
 			console.log("Started");
-			var state = 1;
-			function change() {
+			var state1 = 0;
+			var state2 = 0;
+			var state3 = 0;
+			var state4 = 0;
+			var state5 = 0;
+
+			function change(which) {
 				console.log("IMG pressed");
-				var image = document.getElementById("myImage");
-		    	if (state === 1) {
+				var image = document.getElementById(which);
+		    	if (state1 === 1) {
 		    		image.src = "strawb_empty.png";
 		    		state = 0;
 		    		console.log("Changed to empty");
