@@ -5,89 +5,222 @@
 	</head>
 	<body>
 		<h1>Rating</h1>
-		<div id="div">
+		<div id="div0">
 
 			<h3>Overal rating</h3>
 
-			<img id="strawb1" class="rateImg" onclick="change1()" scr="strawb_empty.png">
-			<img id="strawb2" class="rateImg" onclick="change2()" scr="strawb_empty.png">
-			<img id="strawb3" class="rateImg" onclick="change3()" scr="strawb_empty.png">
-			<img id="strawb4" class="rateImg" onclick="change4()" scr="strawb_empty.png">
-			<img id="strawb5" class="rateImg" onclick="change5()" scr="strawb_empty.png">
+			<img id="strawb10" class="rateImg" scr="strawb_empty.png">
+			<img id="strawb20" class="rateImg" scr="strawb_empty.png">
+			<img id="strawb30" class="rateImg" scr="strawb_empty.png">
+			<img id="strawb40" class="rateImg" scr="strawb_empty.png">
+			<img id="strawb50" class="rateImg" scr="strawb_empty.png">
 		
 		</div>
+
+		<div id="div1">
+
+			<h3>Shops</h3>
+
+			<img id="strawb11" class="rateImg" onclick="change11()" scr="strawb_empty.png">
+			<img id="strawb21" class="rateImg" onclick="change21()" scr="strawb_empty.png">
+			<img id="strawb31" class="rateImg" onclick="change31()" scr="strawb_empty.png">
+			<img id="strawb41" class="rateImg" onclick="change41()" scr="strawb_empty.png">
+			<img id="strawb51" class="rateImg" onclick="change51()" scr="strawb_empty.png">
+		
+		</div>
+
+		<div id="div2">
+
+			<h3>Services</h3>
+
+			<img id="strawb12" class="rateImg" onclick="change12()" scr="strawb_empty.png">
+			<img id="strawb22" class="rateImg" onclick="change22()" scr="strawb_empty.png">
+			<img id="strawb32" class="rateImg" onclick="change32()" scr="strawb_empty.png">
+			<img id="strawb42" class="rateImg" onclick="change42()" scr="strawb_empty.png">
+			<img id="strawb52" class="rateImg" onclick="change52()" scr="strawb_empty.png">
+		
+		</div>
+
 		<script>
 			console.log("Started");
-			var state1 = 0;
-			var state2 = 0;
-			var state3 = 0;
-			var state4 = 0;
-			var state5 = 0;
+			
+			var shops = 5;
+			var services = 3;
 
-			function change1() {
-				console.log("IMG1 pressed");
-				var image = document.getElementById("strawb1");
-		    	if (state1 === 1) {
-		    		image.src = "strawb_empty.png";
-		    		state1 = 0;
-		    		console.log("Changed to empty");
-		    	} else {
-		        	image.src = "strawb_full.png";
-		    		state1 = 1;
-		    		console.log("Changed to full");
-		 		}
+			var overal = calcOveral;
+
+			var image10 = document.getElementById("strawb10");
+			var image20 = document.getElementById("strawb20");
+			var image30 = document.getElementById("strawb30");
+			var image40 = document.getElementById("strawb40");
+			var image50 = document.getElementById("strawb50");
+
+			var image11 = document.getElementById("strawb11");
+			var image21 = document.getElementById("strawb21");
+			var image31 = document.getElementById("strawb31");
+			var image41 = document.getElementById("strawb41");
+			var image51 = document.getElementById("strawb51");
+
+			var image12 = document.getElementById("strawb12");
+			var image22 = document.getElementById("strawb22");
+			var image32 = document.getElementById("strawb32");
+			var image42 = document.getElementById("strawb42");
+			var image52 = document.getElementById("strawb52");
+
+			function change11() {
+				console.log("IMG11 pressed");
+				
+				shops = 1;
+				setFull1(1);
+		    	console.log("Shops: " + shops);
+		 		
 		 	}
-		 	function change2() {
-				console.log("IMG2 pressed");
-				var image = document.getElementById("strawb2");
-		    	if (state2 === 1) {
-		    		image.src = "strawb_empty.png";
-		    		state2 = 0;
-		    		console.log("Changed to empty");
-		    	} else {
-		        	image.src = "strawb_full.png";
-		    		state2 = 1;
-		    		console.log("Changed to full");
-		 		}
+		 	function change21() {
+				console.log("IMG21 pressed");
+				
+		    	shops = 2;
+				setFull1(2);
+		    	console.log("Shops: " + shops);
 		 	}
-		 	function change3() {
-				console.log("IMG3 pressed");
-				var image = document.getElementById("strawb3");
-		    	if (state3 === 1) {
-		    		image.src = "strawb_empty.png";
-		    		state3 = 0;
-		    		console.log("Changed to empty");
-		    	} else {
-		        	image.src = "strawb_full.png";
-		    		state3 = 1;
-		    		console.log("Changed to full");
-		 		}
+		 	function change31() {
+				console.log("IMG31 pressed");
+				
+		    	shops = 3;
+				setFull1(3);
+		    	console.log("Shops: " + shops);
 		 	}
-		 	function change4() {
-				console.log("IMG4 pressed");
-				var image = document.getElementById("strawb4");
-		    	if (state4 === 1) {
-		    		image.src = "strawb_empty.png";
-		    		state4 = 0;
-		    		console.log("Changed to empty");
-		    	} else {
-		        	image.src = "strawb_full.png";
-		    		state4 = 1;
-		    		console.log("Changed to full");
-		 		}
+		 	function change41() {
+				console.log("IMG41 pressed");
+				
+		    	shops = 4;
+				setFull1(4);
+		    	console.log("Shops: " + shops);
 		 	}
-		 	function change5() {
-				console.log("IMG5 pressed");
-				var image = document.getElementById("strawb5");
-		    	if (state5 === 1) {
-		    		image.src = "strawb_empty.png";
-		    		state5 = 0;
-		    		console.log("Changed to empty");
-		    	} else {
-		        	image.src = "strawb_full.png";
-		    		state5 = 1;
-		    		console.log("Changed to full");
+		 	function change51() {
+				console.log("IMG51 pressed");
+				
+		    	shops = 5;
+				setFull1(5);
+		    	console.log("Shops: " + shops);
+		 	}
+
+		 	function setFull1(g) {
+		 		if (g == 1) {
+		 			image11.src = "strawb_full.png";
+		 			image21.src = "strawb_empty.png";
+		 			image31.src = "strawb_empty.png";
+		 			image41.src = "strawb_empty.png";
+		 			image51.src = "strawb_empty.png";
+		 		} else if (g == 2) {
+		 			image11.src = "strawb_full.png";
+		 			image21.src = "strawb_full.png";
+		 			image31.src = "strawb_empty.png";
+		 			image41.src = "strawb_empty.png";
+		 			image51.src = "strawb_empty.png";
+		 		} else if (g == 3){
+		 			image11.src = "strawb_full.png";
+		 			image21.src = "strawb_full.png";
+		 			image31.src = "strawb_full.png";
+		 			image41.src = "strawb_empty.png";
+		 			image51.src = "strawb_empty.png";
+		 		} else if (g == 4) {
+		 			image11.src = "strawb_full.png";
+		 			image21.src = "strawb_full.png";
+		 			image31.src = "strawb_full.png";
+		 			image41.src = "strawb_full.png";
+		 			image51.src = "strawb_empty.png";
+		 		} else if (g == 5) {
+		 			image11.src = "strawb_full.png";
+		 			image21.src = "strawb_full.png";
+		 			image31.src = "strawb_full.png";
+		 			image41.src = "strawb_full.png";
+		 			image51.src = "strawb_full.png";
 		 		}
+		 		overal = calcOveral();
+		 	}
+
+			function change12() {
+				console.log("IMG12 pressed");
+				
+				services = 1;
+				setFull2(1);
+		    	console.log("Services: " + services);
+		 		
+		 	}
+		 	function change22() {
+				console.log("IMG22 pressed");
+				
+		    	services = 2;
+				setFull2(2);
+		    	console.log("Services: " + services);
+		 	}
+		 	function change32() {
+				console.log("IMG32 pressed");
+				
+		    	services = 3;
+				setFull2(3);
+		    	console.log("Services: " + services);
+		 	}
+		 	function change42() {
+				console.log("IMG42 pressed");
+				
+		    	services = 4;
+				setFull2(4);
+		    	console.log("Services: " + services);
+		 	}
+		 	function change52() {
+				console.log("IMG52 pressed");
+				
+		    	services = 5;
+				setFull2(5);
+		    	console.log("Services: " + services);
+		 	}
+
+		 	function setFull2(g) {
+		 		if (g == 0) {
+		 			image12.src = "strawb_empty.png";
+		 			image22.src = "strawb_empty.png";
+		 			image32.src = "strawb_empty.png";
+		 			image42.src = "strawb_empty.png";
+		 			image52.src = "strawb_empty.png";
+		 		} else if (g == 1) {
+		 			image12.src = "strawb_full.png";
+		 			image22.src = "strawb_empty.png";
+		 			image32.src = "strawb_empty.png";
+		 			image42.src = "strawb_empty.png";
+		 			image52.src = "strawb_empty.png";
+		 		} else if (g == 2) {
+		 			image12.src = "strawb_full.png";
+		 			image22.src = "strawb_full.png";
+		 			image32.src = "strawb_empty.png";
+		 			image42.src = "strawb_empty.png";
+		 			image52.src = "strawb_empty.png";
+		 		} else if (g == 3){
+		 			image12.src = "strawb_full.png";
+		 			image22.src = "strawb_full.png";
+		 			image32.src = "strawb_full.png";
+		 			image42.src = "strawb_empty.png";
+		 			image52.src = "strawb_empty.png";
+		 		} else if (g == 4) {
+		 			image12.src = "strawb_full.png";
+		 			image22.src = "strawb_full.png";
+		 			image32.src = "strawb_full.png";
+		 			image42.src = "strawb_full.png";
+		 			image52.src = "strawb_empty.png";
+		 		} else if (g == 5) {
+		 			image12.src = "strawb_full.png";
+		 			image22.src = "strawb_full.png";
+		 			image32.src = "strawb_full.png";
+		 			image42.src = "strawb_full.png";
+		 			image52.src = "strawb_full.png";
+		 		}
+		 		overal = calcOveral();
+		 	}
+
+		 	function calcOveral() {
+		 		var result = ((shops + services) / 2);
+		 		console.log("Overal: " + overal);
+		 		return result;
 		 	}
 		</script>
 	</body>

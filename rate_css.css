@@ -1,8 +1,16 @@
-#div {
+#div0 {
+	display: inline-block;
+}
+
+#div1 {
+	display: inline-block;
+}
+
+#div2 {
 	display: inline-block;
 }
 
 .rateImg {
-	height: 150px;
-	width: 100px;
+	height: 110px;
+	width: 75px;
 }
