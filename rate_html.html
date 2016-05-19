@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Rate</title>
+	</head>
+	<body>
+		<h1>Rate</h1>
+		<img id="myImage" onclick="change()" scr="strawb_empty.png" width="100" height="150">
+		<p>Click me!</p>
+		<script>
+			console.log("Started");
+			var state = 1;
+			function change() {
+				console.log("IMG pressed");
+				var image = document.getElementById("myImage");
+		    	if (state === 1) {
+		    		image.src = "strawb_empty.png";
+		    		state = 0;
+		    		console.log("Changed to empty");
+		    	} else {
+		        	image.src = "strawb_full.png";
+		    		state = 1;
+		    		console.log("Changed to full");
+		 		}
+		 	}
+		</script>
+	</body>
+</html>
