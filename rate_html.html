@@ -104,40 +104,10 @@
 		    	console.log("Shops: " + shops);
 		 	}
 
-		 	function setFull1(g) {
-		 		if (g == 1) {
-		 			image11.src = "strawb_full.png";
-		 			image21.src = "strawb_empty.png";
-		 			image31.src = "strawb_empty.png";
-		 			image41.src = "strawb_empty.png";
-		 			image51.src = "strawb_empty.png";
-		 		} else if (g == 2) {
-		 			image11.src = "strawb_full.png";
-		 			image21.src = "strawb_full.png";
-		 			image31.src = "strawb_empty.png";
-		 			image41.src = "strawb_empty.png";
-		 			image51.src = "strawb_empty.png";
-		 		} else if (g == 3){
-		 			image11.src = "strawb_full.png";
-		 			image21.src = "strawb_full.png";
-		 			image31.src = "strawb_full.png";
-		 			image41.src = "strawb_empty.png";
-		 			image51.src = "strawb_empty.png";
-		 		} else if (g == 4) {
-		 			image11.src = "strawb_full.png";
-		 			image21.src = "strawb_full.png";
-		 			image31.src = "strawb_full.png";
-		 			image41.src = "strawb_full.png";
-		 			image51.src = "strawb_empty.png";
-		 		} else if (g == 5) {
-		 			image11.src = "strawb_full.png";
-		 			image21.src = "strawb_full.png";
-		 			image31.src = "strawb_full.png";
-		 			image41.src = "strawb_full.png";
-		 			image51.src = "strawb_full.png";
-		 		}
-		 		overal = calcOveral();
-		 	}
+			
+
+
+
 
 			function change12() {
 				console.log("IMG12 pressed");
@@ -174,6 +144,88 @@
 		    	services = 5;
 				setFull2(5);
 		    	console.log("Services: " + services);
+		 	}
+
+		 	function setFull0(g) {
+		 		if (g == 0) {
+		 			image10.src = "strawb_empty.png";
+		 			image20.src = "strawb_empty.png";
+		 			image30.src = "strawb_empty.png";
+		 			image40.src = "strawb_empty.png";
+		 			image50.src = "strawb_empty.png";
+		 		} else if (g == 1) {
+		 			image10.src = "strawb_full.png";
+		 			image20.src = "strawb_empty.png";
+		 			image30.src = "strawb_empty.png";
+		 			image40.src = "strawb_empty.png";
+		 			image50.src = "strawb_empty.png";
+		 		} else if (g == 2) {
+		 			image10.src = "strawb_full.png";
+		 			image20.src = "strawb_full.png";
+		 			image30.src = "strawb_empty.png";
+		 			image40.src = "strawb_empty.png";
+		 			image50.src = "strawb_empty.png";
+		 		} else if (g == 3){
+		 			image10.src = "strawb_full.png";
+		 			image20.src = "strawb_full.png";
+		 			image30.src = "strawb_full.png";
+		 			image40.src = "strawb_empty.png";
+		 			image50.src = "strawb_empty.png";
+		 		} else if (g == 4) {
+		 			image10.src = "strawb_full.png";
+		 			image20.src = "strawb_full.png";
+		 			image30.src = "strawb_full.png";
+		 			image40.src = "strawb_full.png";
+		 			image50.src = "strawb_empty.png";
+		 		} else if (g == 5) {
+		 			image10.src = "strawb_full.png";
+		 			image20.src = "strawb_full.png";
+		 			image30.src = "strawb_full.png";
+		 			image40.src = "strawb_full.png";
+		 			image50.src = "strawb_full.png";
+		 		}
+		 		overal = calcOveral();
+		 	}
+
+		 	function setFull1(g) {
+		 		if (g == 0) {
+		 			image11.src = "strawb_empty.png";
+		 			image21.src = "strawb_empty.png";
+		 			image31.src = "strawb_empty.png";
+		 			image41.src = "strawb_empty.png";
+		 			image51.src = "strawb_empty.png";
+		 		} else if (g == 1) {
+		 			image11.src = "strawb_full.png";
+		 			image21.src = "strawb_empty.png";
+		 			image31.src = "strawb_empty.png";
+		 			image41.src = "strawb_empty.png";
+		 			image51.src = "strawb_empty.png";
+		 		} else if (g == 2) {
+		 			image11.src = "strawb_full.png";
+		 			image21.src = "strawb_full.png";
+		 			image31.src = "strawb_empty.png";
+		 			image41.src = "strawb_empty.png";
+		 			image51.src = "strawb_empty.png";
+		 		} else if (g == 3){
+		 			image11.src = "strawb_full.png";
+		 			image21.src = "strawb_full.png";
+		 			image31.src = "strawb_full.png";
+		 			image41.src = "strawb_empty.png";
+		 			image51.src = "strawb_empty.png";
+		 		} else if (g == 4) {
+		 			image11.src = "strawb_full.png";
+		 			image21.src = "strawb_full.png";
+		 			image31.src = "strawb_full.png";
+		 			image41.src = "strawb_full.png";
+		 			image51.src = "strawb_empty.png";
+		 		} else if (g == 5) {
+		 			image11.src = "strawb_full.png";
+		 			image21.src = "strawb_full.png";
+		 			image31.src = "strawb_full.png";
+		 			image41.src = "strawb_full.png";
+		 			image51.src = "strawb_full.png";
+		 		}
+		 		overal = calcOveral();
 		 	}
 
 		 	function setFull2(g) {
@@ -218,9 +270,10 @@
 		 	}
 
 		 	function calcOveral() {
-		 		var result = ((shops + services) / 2);
+		 		overal = ((shops + services) / 2);
 		 		console.log("Overal: " + overal);
-		 		return result;
+		 		setFull0(overal);
+		 		return overal;
 		 	}
 		</script>
 	</body>
