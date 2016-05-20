@@ -1,3 +1,23 @@
+* {
+	margin: auto;
+}
+
+body {
+	background-color: lightblue;
+	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+#bigDiv {
+	border: 3px solid black;
+	background-color: white;
+	width: 600px;
+	border-radius: 10px;
+}
+
 #div0 {
 	display: inline-block;
 }
@@ -11,6 +31,6 @@
 }
 
 .rateImg {
-	height: 110px;
-	width: 75px;
+	height: 100px;
+	width: 100px;
 }
