@@ -17,6 +17,8 @@
 		
 		</div>
 
+		<br>
+
 		<div id="div1">
 
 			<h3>Shops</h3>
@@ -28,6 +30,8 @@
 			<img id="strawb51" class="rateImg" onclick="change51()" scr="strawb_empty.png">
 		
 		</div>
+
+		<br>
 
 		<div id="div2">
 
@@ -44,11 +48,16 @@
 		<script>
 			console.log("Started");
 			
-			var shops = 0;
-			var services = 0;
+			var shops = 1;
+			var shopsPressed = 0;
+			var services = 1;
+			var servicesPressed = 0;
 
 			var overal = calcOveral;
 			var lastOveral = overal;
+
+
+			
 
 			var image10 = document.getElementById("strawb10");
 			var image20 = document.getElementById("strawb20");
@@ -68,39 +77,33 @@
 			var image42 = document.getElementById("strawb42");
 			var image52 = document.getElementById("strawb52");
 
+
+
+
+
 			function change11() {
 				console.log("IMG11 pressed");
-				
-				shops = 1;
 				setFull1(1);
 		    	console.log("Shops: " + shops);
 		 		
 		 	}
 		 	function change21() {
 				console.log("IMG21 pressed");
-				
-		    	shops = 2;
 				setFull1(2);
 		    	console.log("Shops: " + shops);
 		 	}
 		 	function change31() {
 				console.log("IMG31 pressed");
-				
-		    	shops = 3;
 				setFull1(3);
 		    	console.log("Shops: " + shops);
 		 	}
 		 	function change41() {
 				console.log("IMG41 pressed");
-				
-		    	shops = 4;
 				setFull1(4);
 		    	console.log("Shops: " + shops);
 		 	}
 		 	function change51() {
 				console.log("IMG51 pressed");
-				
-		    	shops = 5;
 				setFull1(5);
 		    	console.log("Shops: " + shops);
 		 	}
@@ -112,168 +115,165 @@
 
 			function change12() {
 				console.log("IMG12 pressed");
-				
-				services = 1;
 				setFull2(1);
 		    	console.log("Services: " + services);
 		 		
 		 	}
 		 	function change22() {
 				console.log("IMG22 pressed");
-				
-		    	services = 2;
 				setFull2(2);
 		    	console.log("Services: " + services);
 		 	}
 		 	function change32() {
 				console.log("IMG32 pressed");
-				
-		    	services = 3;
 				setFull2(3);
 		    	console.log("Services: " + services);
 		 	}
 		 	function change42() {
 				console.log("IMG42 pressed");
-				
-		    	services = 4;
 				setFull2(4);
 		    	console.log("Services: " + services);
 		 	}
 		 	function change52() {
 				console.log("IMG52 pressed");
-				
-		    	services = 5;
 				setFull2(5);
 		    	console.log("Services: " + services);
 		 	}
 
-		 	function setFull0(g) {
+
+
+
+
+
+
+
+		 	function setFull0(k) {
 		 		if (isNaN(overal) == false) {
-					if (g == 0) {
+		 			overal = Math.round(overal);
+					if (k == 0) {
 			 			image10.src = "strawb_empty.png";
 			 			image20.src = "strawb_empty.png";
 			 			image30.src = "strawb_empty.png";
 			 			image40.src = "strawb_empty.png";
 			 			image50.src = "strawb_empty.png";
-			 		} else if (g == 1) {
+			 		} else if (k == 1) {
 			 			image10.src = "strawb_full.png";
 			 			image20.src = "strawb_empty.png";
 			 			image30.src = "strawb_empty.png";
 			 			image40.src = "strawb_empty.png";
 			 			image50.src = "strawb_empty.png";
-			 		} else if (g == 2) {
+			 		} else if (k == 2) {
 			 			image10.src = "strawb_full.png";
 			 			image20.src = "strawb_full.png";
 			 			image30.src = "strawb_empty.png";
 			 			image40.src = "strawb_empty.png";
 			 			image50.src = "strawb_empty.png";
-			 		} else if (g == 3){
+			 		} else if (k == 3){
 			 			image10.src = "strawb_full.png";
 			 			image20.src = "strawb_full.png";
 			 			image30.src = "strawb_full.png";
 			 			image40.src = "strawb_empty.png";
 			 			image50.src = "strawb_empty.png";
-			 		} else if (g == 4) {
+			 		} else if (k == 4) {
 			 			image10.src = "strawb_full.png";
 			 			image20.src = "strawb_full.png";
 			 			image30.src = "strawb_full.png";
 			 			image40.src = "strawb_full.png";
 			 			image50.src = "strawb_empty.png";
-			 		} else if (g == 5) {
+			 		} else if (k == 5) {
 			 			image10.src = "strawb_full.png";
 			 			image20.src = "strawb_full.png";
 			 			image30.src = "strawb_full.png";
 			 			image40.src = "strawb_full.png";
 			 			image50.src = "strawb_full.png";
 			 		}
-			 		overal = calcOveral();
 		 		}
 		 	}
 
 		 	function setFull1(g) {
-			 	if (isNaN(shops) == false) {
-			 		if (g == 0) {
-			 			image11.src = "strawb_empty.png";
-			 			image21.src = "strawb_empty.png";
-			 			image31.src = "strawb_empty.png";
-			 			image41.src = "strawb_empty.png";
-			 			image51.src = "strawb_empty.png";
-			 		} else if (g == 1) {
-			 			image11.src = "strawb_full.png";
-			 			image21.src = "strawb_empty.png";
-			 			image31.src = "strawb_empty.png";
-			 			image41.src = "strawb_empty.png";
-			 			image51.src = "strawb_empty.png";
-			 		} else if (g == 2) {
-			 			image11.src = "strawb_full.png";
-			 			image21.src = "strawb_full.png";
-			 			image31.src = "strawb_empty.png";
-			 			image41.src = "strawb_empty.png";
-			 			image51.src = "strawb_empty.png";
-			 		} else if (g == 3){
-			 			image11.src = "strawb_full.png";
-			 			image21.src = "strawb_full.png";
-			 			image31.src = "strawb_full.png";
-			 			image41.src = "strawb_empty.png";
-			 			image51.src = "strawb_empty.png";
-			 		} else if (g == 4) {
-			 			image11.src = "strawb_full.png";
-			 			image21.src = "strawb_full.png";
-			 			image31.src = "strawb_full.png";
-			 			image41.src = "strawb_full.png";
-			 			image51.src = "strawb_empty.png";
-			 		} else if (g == 5) {
-			 			image11.src = "strawb_full.png";
-			 			image21.src = "strawb_full.png";
-			 			image31.src = "strawb_full.png";
-			 			image41.src = "strawb_full.png";
-			 			image51.src = "strawb_full.png";
-			 		}
-			 		overal = calcOveral();
+		 		shops = g;
+			 	if (g == 0) {
+			 		image11.src = "strawb_empty.png";
+			 		image21.src = "strawb_empty.png";
+			 		image31.src = "strawb_empty.png";
+			 		image41.src = "strawb_empty.png";
+			 		image51.src = "strawb_empty.png";
+			 	} else if (g == 1) {
+			 		image11.src = "strawb_full.png";
+			 		image21.src = "strawb_empty.png";
+			 		image31.src = "strawb_empty.png";
+			 		image41.src = "strawb_empty.png";
+			 		image51.src = "strawb_empty.png";
+			 	} else if (g == 2) {
+			 		image11.src = "strawb_full.png";
+			 		image21.src = "strawb_full.png";
+			 		image31.src = "strawb_empty.png";
+			 		image41.src = "strawb_empty.png";
+			 		image51.src = "strawb_empty.png";
+			 	} else if (g == 3){
+			 		image11.src = "strawb_full.png";
+			 		image21.src = "strawb_full.png";
+			 		image31.src = "strawb_full.png";
+			 		image41.src = "strawb_empty.png";
+			 		image51.src = "strawb_empty.png";
+			 	} else if (g == 4) {
+			 		image11.src = "strawb_full.png";
+			 		image21.src = "strawb_full.png";
+			 		image31.src = "strawb_full.png";
+			 		image41.src = "strawb_full.png";
+			 		image51.src = "strawb_empty.png";
+			 	} else if (g == 5) {
+			 		image11.src = "strawb_full.png";
+			 		image21.src = "strawb_full.png";
+			 		image31.src = "strawb_full.png";
+			 		image41.src = "strawb_full.png";
+			 		image51.src = "strawb_full.png";
 			 	}
+			 	overal = calcOveral();
+			 	
 		 	}
 
-		 	function setFull2(g) {
-		 		if (isNaN(services) == false) {
-			 		if (g == 0) {
-			 			image12.src = "strawb_empty.png";
-			 			image22.src = "strawb_empty.png";
-			 			image32.src = "strawb_empty.png";
-			 			image42.src = "strawb_empty.png";
-			 			image52.src = "strawb_empty.png";
-			 		} else if (g == 1) {
-			 			image12.src = "strawb_full.png";
-			 			image22.src = "strawb_empty.png";
-			 			image32.src = "strawb_empty.png";
-			 			image42.src = "strawb_empty.png";
-			 			image52.src = "strawb_empty.png";
-			 		} else if (g == 2) {
-			 			image12.src = "strawb_full.png";
-			 			image22.src = "strawb_full.png";
-			 			image32.src = "strawb_empty.png";
-			 			image42.src = "strawb_empty.png";
-			 			image52.src = "strawb_empty.png";
-			 		} else if (g == 3){
-			 			image12.src = "strawb_full.png";
-			 			image22.src = "strawb_full.png";
-			 			image32.src = "strawb_full.png";
-			 			image42.src = "strawb_empty.png";
-			 			image52.src = "strawb_empty.png";
-			 		} else if (g == 4) {
-			 			image12.src = "strawb_full.png";
-			 			image22.src = "strawb_full.png";
-			 			image32.src = "strawb_full.png";
-			 			image42.src = "strawb_full.png";
-			 			image52.src = "strawb_empty.png";
-			 		} else if (g == 5) {
-			 			image12.src = "strawb_full.png";
-			 			image22.src = "strawb_full.png";
-			 			image32.src = "strawb_full.png";
-			 			image42.src = "strawb_full.png";
-			 			image52.src = "strawb_full.png";
-			 		}
-			 		overal = calcOveral();
+		 	function setFull2(h) {
+		 		services = h
+			 	if (h == 0) {
+			 		image12.src = "strawb_empty.png";
+			 		image22.src = "strawb_empty.png";
+			 		image32.src = "strawb_empty.png";
+			 		image42.src = "strawb_empty.png";
+			 		image52.src = "strawb_empty.png";
+			 	} else if (h == 1) {
+			 		image12.src = "strawb_full.png";
+			 		image22.src = "strawb_empty.png";
+			 		image32.src = "strawb_empty.png";
+			 		image42.src = "strawb_empty.png";
+			 		image52.src = "strawb_empty.png";
+			 	} else if (h == 2) {
+			 		image12.src = "strawb_full.png";
+			 		image22.src = "strawb_full.png";
+			 		image32.src = "strawb_empty.png";
+			 		image42.src = "strawb_empty.png";
+			 		image52.src = "strawb_empty.png";
+			 	} else if (h == 3){
+		 			image12.src = "strawb_full.png";
+			 		image22.src = "strawb_full.png";
+			 		image32.src = "strawb_full.png";
+			 		image42.src = "strawb_empty.png";
+			 		image52.src = "strawb_empty.png";
+			 	} else if (h == 4) {
+			 		image12.src = "strawb_full.png";
+			 		image22.src = "strawb_full.png";
+			 		image32.src = "strawb_full.png";
+			 		image42.src = "strawb_full.png";
+			 		image52.src = "strawb_empty.png";
+			 	} else if (h == 5) {
+			 		image12.src = "strawb_full.png";
+			 		image22.src = "strawb_full.png";
+			 		image32.src = "strawb_full.png";
+			 		image42.src = "strawb_full.png";
+			 		image52.src = "strawb_full.png";
 			 	}
+			 	overal = calcOveral();
+			 	
 		 	}
 
 		 	function calcOveral() {
@@ -282,6 +282,7 @@
 		 			console.log("Overal: " + overal);
 		 			setFull0(overal);
 		 			lastOveral = overal;
+		 			setFull0(overal);
 		 		} else {
 		 			console.log("Overal: " + overal);
 		 		}
