@@ -11,6 +11,10 @@ h1 {
 	font-size: 50px;
 }
 
+#overalTitle {
+	font-size: 30px;
+}
+
 #bigDiv {
 	border: 3px solid black;
 	background-color: white;

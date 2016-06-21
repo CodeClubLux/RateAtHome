@@ -2,6 +2,7 @@
 	<head>
 		<title>Rate</title>
 		<link rel="stylesheet" href="rate_css.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	</head>
 	<body>
 		<h1>Rating</h1>
@@ -15,7 +16,9 @@
 
 			<div id="div0">
 
-				<h3>Overal rating</h3>
+				<h3 id="overalTitle">Overal rating</h3>
+
+				<form id="sendForm"><input type="hidden" name="rating" id="sendInput" value=""><input id="sendButton" type="button" value="Send Overal rating"></form>
 
 				<img id="house_image10" class="rateImg" scr="house_empty.png">
 				<img id="house_image20" class="rateImg" scr="house_empty.png">
@@ -26,6 +29,9 @@
 			</div>
 
 			<br>
+
+			<p style="color: grey">________________________________________________</p>
+
 			<br>
 
 			<div id="div1">
@@ -121,7 +127,7 @@
 			var overal = calcOveral;
 			var lastOveral = overal;
 
-
+			
 			
 
 			var image10 = document.getElementById("house_image10");
@@ -617,8 +623,23 @@
 		 		} else {
 		 			console.log("Overal: " + overal);
 		 		}
+		 		$("#sendInput").value = "overal";
 		 		return overal;
 		 	}
+
+		 	$("#sendForm").click(function() {
+		 		var formdata = document.querySelector("sendInput");
+		 		$.ajax({
+	           		type: "POST",
+	           		url: "rate.php",
+	           		data: formdata,
+	           		processData: false,
+	           		contentType: false,
+	           		success: function(data) {
+	               		console.log("PHP return data: " + data);
+	           		}
+         		});
+		 	});
 		</script>
 	</body>
 </html>
