@@ -18,7 +18,7 @@
 
 				<h3 id="overalTitle">Overal rating</h3>
 
-				<form id="sendForm"><input type="hidden" name="rating" id="sendInput" value=""><input id="sendButton" type="button" value="Send Overal rating"></form>
+				<form id="sendForm"><input type="hidden" name="rating" id="sendInput" value="0"><input id="sendButton" type="button" value="Send Overal rating"></form>
 
 				<img id="house_image10" class="rateImg" scr="house_empty.png">
 				<img id="house_image20" class="rateImg" scr="house_empty.png">
@@ -30,7 +30,7 @@
 
 			<br>
 
-			<p style="color: grey">________________________________________________</p>
+			<p style="color: grey">___________________________________________________</p>
 
 			<br>
 
@@ -628,7 +628,7 @@
 		 	}
 
 		 	$("#sendForm").click(function() {
-		 		var formdata = document.querySelector("sendInput");
+		 		var formdata = document.querySelector("sendForm");
 		 		$.ajax({
 	           		type: "POST",
 	           		url: "rate.php",

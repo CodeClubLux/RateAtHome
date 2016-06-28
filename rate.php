@@ -1,12 +1,14 @@
 <?php
-	$dbconn = pg_connect("host=localhost dbname=Rate user=RateAdmin password=RateAdmin");
+	echo "PHP running";
+
+	$dbconn = pg_connect("host=localhost dbname=rate user=rateadmin password=rateadmin");
 
 	$rating = $_POST["rating"];
 
-	$res = pg_insert($dbconn, "Rate", $rating);
+	$res = pg_insert($dbconn, "rate", $rating);
 
 	if ($res) {
-		echo("Success!");
+		echo "Success!";
 	} else {
 		die("No success.");
 	}
