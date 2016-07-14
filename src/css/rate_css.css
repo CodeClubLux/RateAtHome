@@ -11,7 +11,19 @@ h1 {
 	font-size: 50px;
 }
 
+#bottom-rate h5{
+	color: #7a7a78!important;
+}
+
+#no-floor-average{
+	color: #FBC02D!important;
+	font-size: 65pt!important;
+	font-weight: 200;
+}
+
+
 #overalTitle {
+	color: #BDBDBD!important;
 	font-size: 30px;
 }
 
@@ -22,9 +34,7 @@ h1 {
 	border-radius: 10px;
 }
 
-#div0 {
-	display: inline-block;
-}
+
 
 #div1 {
 	display: inline-block;
@@ -35,6 +45,6 @@ h1 {
 }
 
 .rateImg {
-	height: 100px;
-	width: 100px;
+	height: 30px;
+	width: 30px;
 }
