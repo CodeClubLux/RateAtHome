@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Rate</title>
+		<link rel="stylesheet" href="src/css/rate_css.css">
+		<!--Needed for beautifying the site-->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>-->
+		<!--Offline Jquery solution-->
+		<script src="src/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<h1>Rate this Home</h1>
+
+		<div class="container">
+			<div class="row-fluid" id="div0">
+				<p>
+					<img src="./src/img/house_01.jpg" class="img-thumbnail" alt="Rate me" width="304" height="236" id="myhome">
+				</p>
+				<h3 id="overalTitle">Overal rating</h3>
+				<div class="row-fluid">
+					<div class="col-md-12">
+								<h1 id="no-floor-average"></h1>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<form id="sendForm" class="form-group">
+						<input type="hidden" name="rating" id="sendInput" value="0">
+						<button id="sendButton" class="btn btn-default disabled"> Send Overal rating</button>
+					</form>
+				</div>
+			</div>
+			<hr />
+
+			<div class="row-fluid" id="bottom-rate">
+
+				<div class="col-md-12">
+					<div class="col-md-2">
+						<h5>Property convenience</h5>
+						<p id="div1"></p>
+					</div>
+					<div class="col-md-3">
+						<h5>Services</h5>
+						<p id="div2"></p>
+					</div>
+					<div class="col-md-2">
+						<h5>Noise</h5>
+						<p id="div3"></p>
+					</div>
+					<div class="col-md-3">
+						<h5>Public transportation</h5>
+						<p id="div4"></p>
+					</div>
+					<div class="col-md-2">
+						<h5>Parks</h5>
+						<p id="div5"></p>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<script src="./master.js"></script>
+		<!--Needed for bootstrap animation-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+	</body>
+</html>
